@@ -1,0 +1,34 @@
+
+
+The Java language provides special support for the string concatenation operator ( + ), and for conversion of other objects to strings. String concatenation is implemented through the StringBuilder(or StringBuffer) class and its append method. String conversions are implemented through the method toString, defined by Object and inherited by all classes in Java. For additional information on string concatenation and conversion, see Gosling, Joy, and Steele, The Java Language Specification.
+
+Unless otherwise noted, passing a null argument to a constructor or method in this class will cause a NullPointerException to be thrown.
+
+A String represents a string in the UTF-16 format in which supplementary characters are represented by surrogate pairs (see the section Unicode Character Representations in the Character class for more information). Index values refer to char code units, so a supplementary character uses two positions in a String.
+
+The String class provides methods for dealing with Unicode code points (i.e., characters), in addition to those for dealing with Unicode code units (i.e., char values).
+
+The default whitespace delimiter used by a scanner is as recognized by Character.isWhitespace. The reset() method will reset the value of the scanner's delimiter to the default whitespace delimiter regardless of whether it was previously changed.
+
+
+The next() and hasNext() methods and their primitive-type companion methods (such as nextInt() and hasNextInt()) first skip any input that matches the delimiter pattern, and then attempt to return the next token. Both hasNext and next methods may block waiting for further input. Whether a hasNext method blocks has no connection to whether or not its associated next method will block.
+
+The findInLine(java.lang.String), findWithinHorizon(java.lang.String, int), and skip(java.util.regex.Pattern) methods operate independently of the delimiter pattern. These methods will attempt to match the specified pattern with no regard to delimiters in the input and thus can be used in special circumstances where delimiters are not relevant. These methods may block waiting for more input.
+
+When a scanner throws an InputMismatchException, the scanner will not pass the token that caused the exception, so that it may be retrieved or skipped via some other method.
+
+Depending upon the type of delimiting pattern, empty tokens may be returned. For example, the pattern "\\s+" will return no empty tokens since it matches multiple instances of the delimiter. The delimiting pattern "\\s" could return empty tokens since it only passes one space at a time.
+
+A scanner can read text from any object which implements the Readable interface. If an invocation of the underlying readable's Readable.read(java.nio.CharBuffer) method throws an IOException then the scanner assumes that the end of the input has been reached. The most recent IOException thrown by the underlying readable can be retrieved via the ioException() method.
+
+When a Scanner is closed, it will close its input source if the source implements the Closeable interface.
+
+A Scanner is not safe for multithreaded use without external synchronization.
+
+Unless otherwise mentioned, passing a null parameter into any method of a Scanner will cause a NullPointerException to be thrown.
+
+A scanner will default to interpreting numbers as decimal unless a different radix has been set by using the useRadix(int) method. The reset() method will reset the value of the scanner's radix to 10 regardless of whether it was previously changed. 
+
+The default whitespace delimiter used by a scanner is as recognized by Character.isWhitespace. The reset() method will reset the value of the scanner's delimiter to the default whitespace delimiter regardless of whether it was previously changed.
+
+A scanning operation may block waiting for input.

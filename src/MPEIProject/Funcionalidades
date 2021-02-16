@@ -1,0 +1,12 @@
+1 -  Ver se dois anos num determinado distrito foram similares. [minHash]
+
+2 -  A pessoa clica e aparece a probabilidade de varios intervalos de precipitação aparece (12 meses).[contador, filter]
+
+3 - A pessoa passa estação e aparece a probabilidade de varios intervalos de precipitação (3 meses). [contador, filter]
+
+4 -  A pessoa passa uma data e um distrito e nós dizemos a precipitação [filter]
+
+5 -  A pessoa passa dois meses e dois anos e os distritos e devolvemos a sua distância [minHash]
+
+6 -  A pessoa passa dois meses e vamos ver se esse meses são semelhantes em portugal [minHash]   
+
